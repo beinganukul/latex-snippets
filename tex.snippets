@@ -1,4 +1,3 @@
-global !p
 texMathZones = ['texMathZone']
 texTextZones = ['texMathText']
 texZones     = texMathZones + texTextZones
@@ -22,7 +21,7 @@ snippet template "Basic template" b
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
-\usepackage[dutch]{babel}
+\usepackage[english]{babel}
 \usepackage{amsmath, amssymb}
 
 
@@ -38,7 +37,9 @@ snippet template "Basic template" b
 }
 
 \pdfsuppresswarningpagegroup=1
-
+\title{$1}
+\author{Anukul Adhikari}
+\date{\today}
 \begin{document}
 	$0
 \end{document}
@@ -87,9 +88,9 @@ snippet item "Itemize" bA
 \end{itemize}
 endsnippet
 
-snippet desc "Description" b
+snippet desch "Description" b
 \begin{description}
-	\item[$1] $0
+	\item[$1] \hfill \\\ $0
 \end{description}
 endsnippet
 
@@ -645,4 +646,7 @@ snippet DD "D" iA
 \mathbb{D}
 endsnippet
 
+snippet par "par" i
+\setlength{\parindent}{5ex}\par $0
+endsnippet
 # vim:ft=snippets
